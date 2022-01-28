@@ -38,7 +38,7 @@ class Prompts {
         .then(({managerName, managerId, managerEmail, managerNumber}) => {
             const manager = new Manager(managerName, managerId, managerEmail, managerNumber);
             this.managers.push(manager);
-            this.internPrompt();
+            this.addEmployee();
         })
     }
     internPrompt() {
@@ -68,7 +68,7 @@ class Prompts {
         .then(({internName, internId, internEmail, internNumber}) => {
             const intern = new Intern(internName, internId, internEmail, internNumber);
             this.interns.push(intern);
-            this.engineerPrompt();
+            this.addEmployee();
         })
     }
     engineerPrompt() {
